@@ -1,6 +1,6 @@
 # SpendWise - Daily Expense Tracker
 
-A responsive PWA for tracking daily expenses, built with React, TypeScript, SCSS Modules, and Supabase.
+A responsive PWA for tracking daily expenses,built with React, TypeScript, SCSS Modules, and Supabase.
 
 ## Features
 
