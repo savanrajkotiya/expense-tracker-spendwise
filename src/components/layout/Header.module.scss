@@ -1,0 +1,61 @@
+@use '@/styles/shared' as *;
+
+.header {
+  @include flex-between;
+  height: $header-height;
+  padding: 0 24px;
+  background: var(--color-surface-elevated);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0;
+
+  @include mobile-only {
+    font-size: 1.125rem;
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.iconBtn {
+  @include flex-center;
+  width: 38px;
+  height: 38px;
+  border-radius: $radius-md;
+  color: var(--color-text-muted);
+  transition: all $transition-fast;
+
+  &:hover {
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+}
+
+.avatar {
+  @include flex-center;
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-full;
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-left: 6px;
+}

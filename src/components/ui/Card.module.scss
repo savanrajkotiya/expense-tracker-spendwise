@@ -1,0 +1,36 @@
+@use '@/styles/shared' as *;
+
+.card {
+  @include card-base;
+  overflow: hidden;
+}
+
+.pad-none { padding: 0; }
+.pad-sm { padding: 12px; }
+.pad-md { padding: 20px; }
+.pad-lg { padding: 28px; }
+
+.hoverable {
+  transition: box-shadow $transition-fast, border-color $transition-fast;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    border-color: var(--color-border-hover);
+  }
+}
+
+.header {
+  @include flex-between;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+}
+
+.content {
+  color: var(--color-text);
+}

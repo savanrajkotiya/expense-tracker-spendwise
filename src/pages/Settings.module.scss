@@ -1,0 +1,191 @@
+@use '@/styles/shared' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 680px;
+}
+
+.profileRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  @include flex-center;
+  width: 52px;
+  height: 52px;
+  border-radius: $radius-full;
+  background: var(--color-primary-alpha);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--color-text-heading);
+  font-size: 1.0625rem;
+}
+
+.email {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+// Currency section
+
+.sectionDesc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.currencyPreview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: var(--color-surface);
+  border-radius: $radius-md;
+  border: 1px solid var(--color-border);
+
+  strong {
+    color: var(--color-text-heading);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.unsaved {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-warning, #f59e0b);
+  background: rgba(245, 158, 11, 0.12);
+  padding: 2px 8px;
+  border-radius: $radius-full;
+}
+
+.currencyActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.currencyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+  max-height: 340px;
+  overflow-y: auto;
+  padding-right: 4px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: $radius-full;
+  }
+}
+
+.currencyOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: $radius-md;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface-elevated);
+  transition: all $transition-fast;
+  text-align: left;
+
+  &:hover {
+    border-color: var(--color-border-hover);
+    background: var(--color-surface);
+  }
+}
+
+.currencyActive {
+  border-color: var(--color-primary);
+  background: var(--color-primary-alpha);
+
+  &:hover {
+    border-color: var(--color-primary);
+    background: var(--color-primary-alpha);
+  }
+
+  .currencyCode {
+    color: var(--color-primary);
+  }
+}
+
+.currencySymbol {
+  @include flex-center;
+  width: 30px;
+  height: 30px;
+  border-radius: $radius-sm;
+  background: var(--color-surface);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+  flex-shrink: 0;
+}
+
+.currencyCode {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+  min-width: 32px;
+}
+
+.currencyName {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  @include truncate;
+}
+
+// Theme section
+
+.themeRow {
+  display: flex;
+  gap: 10px;
+}
+
+.themeOption {
+  @include flex-center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 24px;
+  border-radius: $radius-lg;
+  border: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+  transition: all $transition-fast;
+  flex: 1;
+
+  span {
+    font-size: 0.8125rem;
+    font-weight: 500;
+  }
+
+  &:hover {
+    border-color: var(--color-border-hover);
+    color: var(--color-text);
+  }
+}
+
+.themeActive {
+  border-color: var(--color-primary);
+  background: var(--color-primary-alpha);
+  color: var(--color-primary);
+
+  &:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+}

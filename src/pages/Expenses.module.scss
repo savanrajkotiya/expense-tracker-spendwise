@@ -1,0 +1,144 @@
+@use '@/styles/shared' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.toolbar {
+  @include flex-between;
+  gap: 12px;
+}
+
+.searchBox {
+  position: relative;
+  flex: 1;
+  max-width: 360px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.searchInput {
+  @include input-base;
+  padding-left: 38px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filterSelect,
+.filterDate {
+  @include input-base;
+  width: auto;
+  min-width: 150px;
+  font-size: 0.8125rem;
+  padding: 7px 12px;
+}
+
+.filterSelect {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 32px;
+}
+
+.center {
+  @include flex-center;
+  padding: 48px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+}
+
+.categoryDot {
+  @include flex-center;
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-md;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.note {
+  font-weight: 500;
+  color: var(--color-text-heading);
+  @include truncate;
+}
+
+.meta {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.amount {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-danger);
+  font-variant-numeric: tabular-nums;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0.4;
+  transition: opacity $transition-fast;
+
+  .row:hover & {
+    opacity: 1;
+  }
+}
+
+.actionBtn {
+  @include flex-center;
+  width: 28px;
+  height: 28px;
+  border-radius: $radius-sm;
+  color: var(--color-text-muted);
+  transition: all $transition-fast;
+
+  &:hover {
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+}

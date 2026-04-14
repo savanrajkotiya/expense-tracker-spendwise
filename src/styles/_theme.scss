@@ -1,0 +1,78 @@
+:root,
+[data-theme='light'] {
+  --color-bg: #ffffff;
+  --color-surface: #f8fafc;
+  --color-surface-elevated: #ffffff;
+  --color-border: #e2e8f0;
+  --color-border-hover: #cbd5e1;
+
+  --color-text: #334155;
+  --color-text-heading: #0f172a;
+  --color-text-muted: #94a3b8;
+  --color-text-inverse: #ffffff;
+
+  --color-primary: #10b981;
+  --color-primary-hover: #059669;
+  --color-primary-alpha: rgba(16, 185, 129, 0.12);
+  --color-primary-text: #ffffff;
+
+  --color-danger: #ef4444;
+  --color-danger-hover: #dc2626;
+  --color-danger-alpha: rgba(239, 68, 68, 0.1);
+
+  --color-warning: #f59e0b;
+  --color-warning-alpha: rgba(245, 158, 11, 0.1);
+
+  --color-success: #22c55e;
+  --color-success-alpha: rgba(34, 197, 94, 0.1);
+
+  --color-info: #3b82f6;
+  --color-info-alpha: rgba(59, 130, 246, 0.1);
+
+  --shadow-color: rgba(0, 0, 0, 0.08);
+
+  --color-sidebar-bg: #f1f5f9;
+  --color-sidebar-hover: #e2e8f0;
+  --color-sidebar-active: var(--color-primary-alpha);
+  --color-sidebar-text: #475569;
+  --color-sidebar-text-active: var(--color-primary);
+}
+
+[data-theme='dark'] {
+  --color-bg: #0c0f1a;
+  --color-surface: #151926;
+  --color-surface-elevated: #1c2033;
+  --color-border: #2a2f42;
+  --color-border-hover: #3b4158;
+
+  --color-text: #b0b8cd;
+  --color-text-heading: #e8ecf4;
+  --color-text-muted: #6b7394;
+  --color-text-inverse: #0c0f1a;
+
+  --color-primary: #34d399;
+  --color-primary-hover: #6ee7b7;
+  --color-primary-alpha: rgba(52, 211, 153, 0.15);
+  --color-primary-text: #022c22;
+
+  --color-danger: #f87171;
+  --color-danger-hover: #fca5a5;
+  --color-danger-alpha: rgba(248, 113, 113, 0.15);
+
+  --color-warning: #fbbf24;
+  --color-warning-alpha: rgba(251, 191, 36, 0.15);
+
+  --color-success: #4ade80;
+  --color-success-alpha: rgba(74, 222, 128, 0.15);
+
+  --color-info: #60a5fa;
+  --color-info-alpha: rgba(96, 165, 250, 0.15);
+
+  --shadow-color: rgba(0, 0, 0, 0.4);
+
+  --color-sidebar-bg: #111525;
+  --color-sidebar-hover: #1c2033;
+  --color-sidebar-active: var(--color-primary-alpha);
+  --color-sidebar-text: #8891ab;
+  --color-sidebar-text-active: var(--color-primary);
+}

@@ -1,0 +1,36 @@
+@use '@/styles/shared' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-heading);
+}
+
+.input {
+  @include input-base;
+}
+
+.hasError {
+  border-color: var(--color-danger);
+
+  &:focus {
+    border-color: var(--color-danger);
+    box-shadow: 0 0 0 3px var(--color-danger-alpha);
+  }
+}
+
+.error {
+  font-size: 0.8125rem;
+  color: var(--color-danger);
+}
+
+.hint {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}

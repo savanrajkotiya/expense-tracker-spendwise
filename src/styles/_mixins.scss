@@ -1,0 +1,73 @@
+@use 'variables' as *;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $bp-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: $bp-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: $bp-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: $bp-xl) { @content; }
+  }
+}
+
+@mixin mobile-only {
+  @media (max-width: #{$bp-lg - 1px}) { @content; }
+}
+
+@mixin desktop-only {
+  @media (min-width: $bp-lg) { @content; }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin card-base {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+}
+
+@mixin input-base {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-md;
+  outline: none;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+
+  &::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  &:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-alpha);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

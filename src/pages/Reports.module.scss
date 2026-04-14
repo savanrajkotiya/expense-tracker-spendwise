@@ -1,0 +1,72 @@
+@use '@/styles/shared' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dateRow {
+  display: flex;
+  gap: 16px;
+
+  @include mobile-only {
+    flex-direction: column;
+  }
+}
+
+.dateField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.dateLabel {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-heading);
+}
+
+.dateInput {
+  @include input-base;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.statLabel {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  font-variant-numeric: tabular-nums;
+}
+
+.center {
+  @include flex-center;
+  padding: 24px;
+}
+
+.exportRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.emptyMsg {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: 12px;
+}

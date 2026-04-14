@@ -1,0 +1,108 @@
+@use '@/styles/shared' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.toolbar {
+  @include flex-between;
+}
+
+.count {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.center {
+  @include flex-center;
+  padding: 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.budgetHeader {
+  @include flex-between;
+  margin-bottom: 14px;
+}
+
+.budgetName {
+  font-weight: 600;
+  color: var(--color-text-heading);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.budgetPeriod {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: capitalize;
+}
+
+.budgetActions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity $transition-fast;
+
+  *:hover > & {
+    opacity: 1;
+  }
+}
+
+.actBtn {
+  @include flex-center;
+  width: 28px;
+  height: 28px;
+  border-radius: $radius-sm;
+  color: var(--color-text-muted);
+  transition: all $transition-fast;
+
+  &:hover {
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+}
+
+.budgetAmounts {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.spent {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  font-variant-numeric: tabular-nums;
+}
+
+.limit {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.remaining {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: 8px;
+}
+
+.dialogForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dialogActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-top: 4px;
+}

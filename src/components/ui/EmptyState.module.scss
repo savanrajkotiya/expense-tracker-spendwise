@@ -1,0 +1,36 @@
+@use '@/styles/shared' as *;
+
+.wrapper {
+  @include flex-center;
+  flex-direction: column;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.icon {
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+  opacity: 0.6;
+
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+  margin-bottom: 6px;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  max-width: 320px;
+}
+
+.action {
+  margin-top: 20px;
+}

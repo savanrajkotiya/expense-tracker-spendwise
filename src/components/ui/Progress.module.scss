@@ -1,0 +1,35 @@
+@use '@/styles/shared' as *;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.track {
+  flex: 1;
+  background: var(--color-surface);
+  border-radius: $radius-full;
+  overflow: hidden;
+}
+
+.sm { height: 6px; }
+.md { height: 10px; }
+
+.fill {
+  height: 100%;
+  border-radius: $radius-full;
+  transition: width 0.5s ease;
+}
+
+.success { background: var(--color-success); }
+.warning { background: var(--color-warning); }
+.danger { background: var(--color-danger); }
+
+.label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  min-width: 36px;
+  text-align: right;
+}

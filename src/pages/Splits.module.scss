@@ -1,0 +1,108 @@
+@use '@/styles/shared' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.center {
+  @include flex-center;
+  padding: 48px;
+}
+
+.summary {
+  @include flex-between;
+}
+
+.summaryLabel {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+}
+
+.summaryValue {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-warning);
+  font-variant-numeric: tabular-nums;
+}
+
+.sectionTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+  margin-bottom: 10px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.checkBtn {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.settled {
+  color: var(--color-success);
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.name {
+  font-weight: 500;
+  color: var(--color-text-heading);
+  @include truncate;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.amount {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-text-heading);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.deleteBtn {
+  @include flex-center;
+  width: 28px;
+  height: 28px;
+  border-radius: $radius-sm;
+  color: var(--color-text-muted);
+  opacity: 0;
+  transition: all $transition-fast;
+
+  .row:hover & {
+    opacity: 1;
+  }
+
+  &:hover {
+    background: var(--color-danger-alpha);
+    color: var(--color-danger);
+  }
+}
