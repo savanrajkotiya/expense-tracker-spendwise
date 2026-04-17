@@ -1,4 +1,4 @@
-# SpendWise - Daily Expense Tracker
+# SpendX - Daily Expense Tracker
 
 A responsive PWA for tracking daily expenses,built with React, TypeScript, SCSS Modules, and Supabase.
 

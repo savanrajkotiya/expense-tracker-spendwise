@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/Input'
 import { Button } from '@/components/ui/Button'
 import { useAuth } from '@/contexts/AuthContext'
 import { APP_NAME } from '@/lib/constants'
+import { BrandMark } from '@/components/brand/BrandMark'
 import styles from './Auth.module.scss'
 
 export default function Signup() {
@@ -64,7 +65,7 @@ export default function Signup() {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <div className={styles.header}>
-          <span className={styles.logo}>💰</span>
+          <BrandMark size={64} className={styles.logo} />
           <h1 className={styles.title}>{APP_NAME}</h1>
           <p className={styles.subtitle}>Create your account to start tracking.</p>
         </div>

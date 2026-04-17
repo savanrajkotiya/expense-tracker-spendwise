@@ -17,7 +17,7 @@ const pageTitles: Record<string, string> = {
 
 export function AppShell() {
   const location = useLocation()
-  const title = pageTitles[location.pathname] || 'SpendWise'
+  const title = pageTitles[location.pathname] || 'SpendX'
 
   return (
     <div className={styles.shell}>

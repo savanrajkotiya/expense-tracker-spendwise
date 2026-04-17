@@ -1,11 +1,11 @@
 {
-  "name": "SpendWise - Daily Expense Tracker",
-  "short_name": "SpendWise",
+  "name": "SpendX - Daily Expense Tracker",
+  "short_name": "SpendX",
   "description": "Track your daily expenses effortlessly",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#10b981",
+  "theme_color": "#16c784",
   "orientation": "portrait-primary",
   "icons": [
     {

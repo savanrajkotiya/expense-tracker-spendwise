@@ -1,4 +1,4 @@
-export const APP_NAME = 'SpendWise'
+export const APP_NAME = 'SpendX'
 
 export const DEFAULT_CURRENCY = 'INR'
 
